@@ -1,0 +1,70 @@
+{
+  "version": "4",
+  "specifiers": {
+    "jsr:@eta-dev/eta@^3.5.0": "3.5.0",
+    "jsr:@hono/hono@^4.6.20": "4.6.20",
+    "jsr:@std/assert@1": "1.0.11",
+    "jsr:@std/dotenv@*": "0.225.3",
+    "jsr:@std/internal@^1.0.5": "1.0.5",
+    "jsr:@std/path@*": "1.0.8",
+    "jsr:@std/yaml@^1.0.5": "1.0.5",
+    "jsr:@valibot/valibot@~0.42.1": "0.42.1",
+    "npm:kysely@~0.27.5": "0.27.5",
+    "npm:postgres@*": "3.4.5",
+    "npm:postgres@^3.4.5": "3.4.5",
+    "npm:sqlite@*": "5.1.1",
+    "npm:sqlite@^5.1.1": "5.1.1"
+  },
+  "jsr": {
+    "@eta-dev/eta@3.5.0": {
+      "integrity": "6b70827efc14c7cbf08498ac7a922ecab003641caf3852a6cb5b1b12ee58fb37"
+    },
+    "@hono/hono@4.6.20": {
+      "integrity": "0db02d7b80db67a17e18b434c6105af002412cada5e908013086eb9fa9466a87"
+    },
+    "@std/assert@1.0.11": {
+      "integrity": "2461ef3c368fe88bc60e186e7744a93112f16fd110022e113a0849e94d1c83c1",
+      "dependencies": [
+        "jsr:@std/internal"
+      ]
+    },
+    "@std/dotenv@0.225.3": {
+      "integrity": "a95e5b812c27b0854c52acbae215856d9cce9d4bbf774d938c51d212711e8d4a"
+    },
+    "@std/internal@1.0.5": {
+      "integrity": "54a546004f769c1ac9e025abd15a76b6671ddc9687e2313b67376125650dc7ba"
+    },
+    "@std/path@1.0.8": {
+      "integrity": "548fa456bb6a04d3c1a1e7477986b6cffbce95102d0bb447c67c4ee70e0364be"
+    },
+    "@std/yaml@1.0.5": {
+      "integrity": "71ba3d334305ee2149391931508b2c293a8490f94a337eef3a09cade1a2a2742"
+    },
+    "@valibot/valibot@0.42.1": {
+      "integrity": "ba0f6f7964aaeec0e4b1f793d575061f325ae6254cbb9d7ff01fb65068a0a23b"
+    }
+  },
+  "npm": {
+    "kysely@0.27.5": {
+      "integrity": "sha512-s7hZHcQeSNKpzCkHRm8yA+0JPLjncSWnjb+2TIElwS2JAqYr+Kv3Ess+9KFfJS0C1xcQ1i9NkNHpWwCYpHMWsA=="
+    },
+    "postgres@3.4.5": {
+      "integrity": "sha512-cDWgoah1Gez9rN3H4165peY9qfpEo+SA61oQv65O3cRUE1pOEoJWwddwcqKE8XZYjbblOJlYDlLV4h67HrEVDg=="
+    },
+    "sqlite@5.1.1": {
+      "integrity": "sha512-oBkezXa2hnkfuJwUo44Hl9hS3er+YFtueifoajrgidvqsJRQFpc5fKoAkAor1O5ZnLoa28GBScfHXs8j0K358Q=="
+    }
+  },
+  "workspace": {
+    "dependencies": [
+      "jsr:@eta-dev/eta@^3.5.0",
+      "jsr:@hono/hono@^4.6.20",
+      "jsr:@std/assert@1",
+      "jsr:@std/yaml@^1.0.5",
+      "jsr:@valibot/valibot@~0.42.1",
+      "npm:kysely@~0.27.5",
+      "npm:postgres@^3.4.5",
+      "npm:sqlite@^5.1.1"
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+- name: time_teller
+  description: This is a function to tell the current time.
+  properties: {}
+  required: []
+- name: food_order
+  description: Order food online.
+  properties:
+    type_of_food:
+      type: string
+      description: The type of the food.
+  required: ["type_of_food"]

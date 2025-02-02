@@ -1,0 +1,9 @@
+Tool definition:
+```json
+<%= it.toolDefinitions %>
+```
+
+Request Prompt:
+```
+<%= it.request %>
+```
