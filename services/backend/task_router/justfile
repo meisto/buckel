@@ -1,0 +1,7 @@
+run_dev:
+   deno run \
+      --allow-env \
+      --allow-net \
+      --allow-read \
+      --env \
+      main.ts

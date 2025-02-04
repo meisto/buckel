@@ -29,7 +29,7 @@ export async function routeMessage(
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      "model": "llama3.1",
+      "model": "llama3.2",
       "system": systemPromptRouting,
       "prompt": payload,
       "stream": false,
