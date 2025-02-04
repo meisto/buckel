@@ -1,0 +1,16 @@
+[tool.pylint.main]
+ignore-patterns = ["^\\.#"]
+
+py-version = "3.13"
+
+[tool.pylint.basic]
+no-docstring-rgx = "^_"
+
+[tool.pylint."messages control"]
+disable = ["raw-checker-failed", "bad-inline-option", "locally-disabled", "file-ignored", "suppressed-message", "useless-suppression", "deprecated-pragma", "use-implicit-booleaness-not-comparison-to-string", "use-implicit-booleaness-not-comparison-to-zero", "use-symbolic-message-instead"]
+
+[tool.pylint.variables]
+ignored-argument-names = "_.*|^ignored_|^unused_"
+
+[tool.pylint.logging]
+logging-format-style=new

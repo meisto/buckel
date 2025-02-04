@@ -1,0 +1,8 @@
+fmt:
+   poetry run black .
+
+lint:
+   poetry run pylint rag
+
+run:
+   poetry run rag

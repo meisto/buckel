@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "rag"
+version = "0.1.0"
+description = ""
+authors = ["meisto <contact@meisto.de>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+chromadb = "^0.6.3"
+pydantic = "^2.10.6"
+pydantic-settings = "^2.7.1"
+pyyaml = "^6.0.2"
+sqlmodel = "^0.0.22"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^25.1.0"
+pylint = "^3.3.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+rag = 'rag.main:main'
