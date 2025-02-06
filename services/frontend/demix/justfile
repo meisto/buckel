@@ -1,0 +1,13 @@
+fmt:
+   prettier --write .
+build:
+    pnpm react-router build
+
+dev: 
+   pnpm react-router dev
+
+start:
+   pnpm react-router-serve ./build/server/index.js
+
+typecheck:
+   pnpm react-router typegen && tsc
