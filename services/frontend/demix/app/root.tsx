@@ -32,7 +32,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body className="dark">
+      <body className="dark bg-gradient-to-b from-[#87AF87] to-gray-900">
         {children}
         <ScrollRestoration />
         <Scripts />
