@@ -1,0 +1,13 @@
+model Group {
+  name    String            @id
+  members GroupMembership[]
+}
+
+model GroupMembership {
+  userName  String
+  groupName String
+  group     Group  @relation(fields: [groupName], references: [name])
+  user      User   @relation(fields: [userName], references: [name])
+
+  @@id([userName, groupName])
+}

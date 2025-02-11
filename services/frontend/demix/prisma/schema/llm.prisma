@@ -1,0 +1,21 @@
+model LLMChat {
+  id          String       @id @default(cuid())
+  name        String
+  userId      String
+  messages    LLMMessage[]
+  dateCreated DateTime     @default(now())
+  dateUpdated DateTime     @default(now())
+  deleted     Boolean      @default(false)
+
+  user User @relation(fields: [userId], references: [id])
+}
+
+model LLMMessage {
+  chatId String
+  index     Int
+  role      String
+  content   String
+  chat   LLMChat @relation(fields: [chatId], references: [id], onDelete: Cascade)
+
+  @@id([chatId, index])
+}

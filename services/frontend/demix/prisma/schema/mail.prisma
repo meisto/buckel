@@ -1,0 +1,41 @@
+model Postbox {
+  id    String @unique @default(cuid())
+  name  String @default("inbox")
+  user  String @default("unknown")
+  index Int
+  Mail  Mail[]
+
+  @@id([name, user])
+}
+
+model Mail {
+  id              String            @id
+  from            String
+  to              String
+  date            DateTime
+  subject         String
+  isRead          Boolean
+  path            String?
+  postboxUser     String
+  postboxName     String
+  Postbox         Postbox           @relation(fields: [postboxUser, postboxName], references: [user, name])
+  MailAttachement MailAttachement[]
+  MailCC          MailCC[]
+}
+
+model MailCC {
+  mailId String
+  cc     String
+  mail   Mail   @relation(fields: [mailId], references: [id])
+
+  @@id([mailId, cc])
+}
+
+model MailAttachement {
+  mailId      String
+  index       Int
+  attachement String
+  mail        Mail   @relation(fields: [mailId], references: [id])
+
+  @@id([mailId, index])
+}

@@ -1,0 +1,7 @@
+model RagSession {
+  id    String   @id
+  query String
+  date  DateTime @default(now())
+  count Int      @default(5)
+  user  String
+}

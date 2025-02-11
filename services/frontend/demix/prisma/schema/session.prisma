@@ -1,0 +1,21 @@
+model User {
+  id               String            @id @default(cuid())
+  name             String            @unique
+  email            String?           @unique
+  password         String
+  createdAt        DateTime          @default(now())
+  updatedAt        DateTime          @updatedAt
+  iconPath         String            @default("https://github.com/shadcn.png")
+  twoFactorSecret  String?
+  groupMemberships GroupMembership[]
+  LLMChat          LLMChat[]
+  sessions         Session[]
+}
+
+model Session {
+  id                     String   @id
+  userName               String
+  expiresAt              DateTime
+  is2factorAuthenticated Boolean  @default(false)
+  user                   User     @relation(fields: [userName], references: [name])
+}
