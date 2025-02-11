@@ -1,5 +1,5 @@
 fmt:
-   prettier --write .
+   pnpm exec prettier --write .
 build:
     pnpm react-router build
 
@@ -11,3 +11,6 @@ start:
 
 typecheck:
    pnpm react-router typegen && tsc
+
+lint:
+   pnpm dlx eslint .
